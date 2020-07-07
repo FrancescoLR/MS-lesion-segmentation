@@ -3,7 +3,9 @@
 For installing NiftyNet please clone the repository and proceed as follow:
 
 cd NiftyNet/
+
 pip install -r requirements.txt
+
 
 This will install the requirements for running the code.
 
