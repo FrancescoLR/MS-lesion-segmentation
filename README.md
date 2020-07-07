@@ -13,6 +13,7 @@ A configuration file and a trained model are provided. To run NiftyNet follow th
 
 
 
+
 References:
 
 Gibson, E., Li, W., Sudre, C., Fidon, L., Shakir, D. I., Wang, G., ... & Whyntie, T. (2018). NiftyNet: a deep-learning platform for medical imaging. Computer methods and programs in biomedicine, 158, 113-122.
