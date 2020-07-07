@@ -1,0 +1,185 @@
+Input params at 2019-12-10 19:46:41.
+[CUSTOM]
+-- num_classes: 3
+-- output_prob: True
+-- label_normalisation: False
+-- softmax: True
+-- min_sampling_ratio: 0
+-- compulsory_labels: (0, 1)
+-- rand_samples: 0
+-- min_numb_labels: 1
+-- proba_connect: True
+-- evaluation_units: foreground
+-- lr_step_size: 20000
+-- lr_gamma: 0.5
+-- weight_map: ('W', 'W_TISSUE')
+-- image: ('MP2RAGE', 'EPI', 'T2star')
+-- sampler: ('GT2',)
+-- inferred: ()
+-- label: ('GT', 'GT_TISSUE')
+-- name: net_segment
+[CONFIG_FILE]
+-- path: /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/nih_config_mul.ini
+[MP2RAGE]
+-- csv_file: /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/MP2RAGE_n4.csv
+-- filename_contains: None
+-- filename_not_contains: ()
+-- filename_removefromid: 
+-- interp_order: 1
+-- loader: None
+-- pixdim: ()
+-- axcodes: ('A', 'R', 'S')
+-- spatial_window_size: (68, 68, 68)
+[EPI]
+-- csv_file: /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/EPI.csv
+-- filename_contains: None
+-- filename_not_contains: ()
+-- filename_removefromid: 
+-- interp_order: 1
+-- loader: None
+-- pixdim: ()
+-- axcodes: ('A', 'R', 'S')
+-- spatial_window_size: (68, 68, 68)
+[T2STAR]
+-- csv_file: /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/T2star_n4.csv
+-- filename_contains: None
+-- filename_not_contains: ()
+-- filename_removefromid: 
+-- interp_order: 1
+-- loader: None
+-- pixdim: ()
+-- axcodes: ('A', 'R', 'S')
+-- spatial_window_size: (68, 68, 68)
+[GT]
+-- csv_file: /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/GT_two.csv
+-- filename_contains: None
+-- filename_not_contains: ()
+-- filename_removefromid: 
+-- interp_order: 0
+-- loader: None
+-- pixdim: ()
+-- axcodes: ('A', 'R', 'S')
+-- spatial_window_size: (28, 28, 28)
+[GT2]
+-- csv_file: /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/GT_all_same.csv
+-- filename_contains: None
+-- filename_not_contains: ()
+-- filename_removefromid: 
+-- interp_order: 0
+-- loader: None
+-- pixdim: ()
+-- axcodes: ('A', 'R', 'S')
+-- spatial_window_size: (28, 28, 28)
+[GT_TISSUE]
+-- csv_file: /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/GT_tissue.csv
+-- filename_contains: None
+-- filename_not_contains: ()
+-- filename_removefromid: 
+-- interp_order: 0
+-- loader: None
+-- pixdim: ()
+-- axcodes: ('A', 'R', 'S')
+-- spatial_window_size: (28, 28, 28)
+[W]
+-- csv_file: /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/WEIGHTS.csv
+-- filename_contains: None
+-- filename_not_contains: ()
+-- filename_removefromid: 
+-- interp_order: 1
+-- loader: None
+-- pixdim: ()
+-- axcodes: ('A', 'R', 'S')
+-- spatial_window_size: (28, 28, 28)
+[W_TISSUE]
+-- csv_file: /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/WEIGHTS_TISSUE.csv
+-- filename_contains: None
+-- filename_not_contains: ()
+-- filename_removefromid: 
+-- interp_order: 1
+-- loader: None
+-- pixdim: ()
+-- axcodes: ('A', 'R', 'S')
+-- spatial_window_size: (28, 28, 28)
+[S]
+-- csv_file: /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/SAMPLE.csv
+-- filename_contains: None
+-- filename_not_contains: ()
+-- filename_removefromid: 
+-- interp_order: 0
+-- loader: None
+-- pixdim: ()
+-- axcodes: ('A', 'R', 'S')
+-- spatial_window_size: (28, 28, 28)
+[SYSTEM]
+-- cuda_devices: 1
+-- num_threads: 16
+-- num_gpus: 1
+-- model_dir: /media/francesco/data/Fra/DL/GitLab_Bern/niftynet/niftynet/models/unet_nih_multiple
+-- dataset_split_file: split.csv
+-- event_handler: ('model_saver', 'model_restorer', 'sampler_threading', 'apply_gradients', 'output_interpreter', 'console_logger', 'tensorboard_logger')
+-- iteration_generator: iteration_generator
+-- action: training
+[NETWORK]
+-- name: niftynet.network.unet_channel_dropout.UNet3D_shallow
+-- activation_function: prelu
+-- batch_size: 2
+-- smaller_final_batch_mode: pad
+-- decay: 1e-05
+-- reg_type: L2
+-- volume_padding_size: (0, 0, 0)
+-- volume_padding_mode: minimum
+-- window_sampling: balanced
+-- queue_length: 128
+-- multimod_foreground_type: and
+-- histogram_ref_file: ./histogram_ref_file.txt
+-- norm_type: percentile
+-- cutoff: (0.05, 0.95)
+-- foreground_type: otsu_plus
+-- normalisation: True
+-- whitening: True
+-- percentile_normalisation: False
+-- intensity_augmentation: True
+-- normalise_foreground_only: False
+-- weight_initializer: he_normal
+-- bias_initializer: zeros
+-- keep_prob: 0.6
+-- weight_initializer_args: {}
+-- bias_initializer_args: {}
+[TRAINING]
+-- optimiser: adam
+-- sample_per_volume: 64
+-- rotation_angle: ()
+-- rotation_angle_x: ()
+-- rotation_angle_y: ()
+-- rotation_angle_z: (-45.0, 45.0)
+-- scaling_percentage: ()
+-- antialiasing: True
+-- bias_field_range: ()
+-- bf_order: 3
+-- random_flipping_axes: (0, 1, 2)
+-- do_elastic_deformation: False
+-- num_ctrl_points: 4
+-- deformation_sigma: 15
+-- proportion_to_deform: 0.5
+-- lr: 0.0001
+-- warmup: 2000
+-- loss_type: niftynet.layer.loss_segmentation.cross_entropy
+-- starting_iter: 0
+-- save_every_n: 5000
+-- tensorboard_every_n: 50
+-- max_iter: 200000
+-- max_checkpoints: 80
+-- validation_every_n: 50
+-- validation_max_iter: 1
+-- exclude_fraction_for_validation: 0.0
+-- exclude_fraction_for_inference: 0.0
+-- vars_to_restore: 
+-- vars_to_freeze: 
+[INFERENCE]
+-- spatial_window_size: (68, 68, 68)
+-- inference_iter: 135000
+-- dataset_to_infer: validation
+-- save_seg_dir: ./output_cl/
+-- output_postfix: _niftynet_out
+-- output_interp_order: 0
+-- border: (20, 20, 20)

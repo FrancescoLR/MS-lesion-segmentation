@@ -1,0 +1,32 @@
+INFO:niftynet:2019-12-10 19:45:47,305: set CUDA_VISIBLE_DEVICES to 1
+INFO:niftynet:2019-12-10 19:45:47,305: starting segmentation application
+INFO:niftynet:2019-12-10 19:45:47,308: [MP2RAGE] using existing csv file /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/MP2RAGE_n4.csv, skipped filenames search
+INFO:niftynet:2019-12-10 19:45:47,320: [EPI] using existing csv file /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/EPI.csv, skipped filenames search
+INFO:niftynet:2019-12-10 19:45:47,337: [T2star] using existing csv file /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/T2star_n4.csv, skipped filenames search
+INFO:niftynet:2019-12-10 19:45:47,345: [GT] using existing csv file /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/GT_two.csv, skipped filenames search
+INFO:niftynet:2019-12-10 19:45:47,362: [GT2] using existing csv file /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/GT_all_same.csv, skipped filenames search
+INFO:niftynet:2019-12-10 19:45:47,378: [GT_TISSUE] using existing csv file /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/GT_tissue.csv, skipped filenames search
+INFO:niftynet:2019-12-10 19:45:47,397: [W] using existing csv file /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/WEIGHTS.csv, skipped filenames search
+INFO:niftynet:2019-12-10 19:45:47,416: [W_TISSUE] using existing csv file /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/WEIGHTS_TISSUE.csv, skipped filenames search
+INFO:niftynet:2019-12-10 19:45:47,434: [S] using existing csv file /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/SAMPLE.csv, skipped filenames search
+INFO:niftynet:2019-12-10 19:45:47,442: 
+
+Number of subjects 50, input section names: ['subject_id', 'MP2RAGE', 'EPI', 'T2star', 'GT', 'GT2', 'GT_TISSUE', 'W', 'W_TISSUE', 'S']
+-- using all subjects (without data partitioning).
+
+INFO:niftynet:2019-12-10 19:46:41,846: set CUDA_VISIBLE_DEVICES to 1
+INFO:niftynet:2019-12-10 19:46:41,846: starting segmentation application
+INFO:niftynet:2019-12-10 19:46:41,848: [MP2RAGE] using existing csv file /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/MP2RAGE_n4.csv, skipped filenames search
+INFO:niftynet:2019-12-10 19:46:41,853: [EPI] using existing csv file /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/EPI.csv, skipped filenames search
+INFO:niftynet:2019-12-10 19:46:41,859: [T2star] using existing csv file /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/T2star_n4.csv, skipped filenames search
+INFO:niftynet:2019-12-10 19:46:41,865: [GT] using existing csv file /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/GT_two.csv, skipped filenames search
+INFO:niftynet:2019-12-10 19:46:41,871: [GT2] using existing csv file /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/GT_all_same.csv, skipped filenames search
+INFO:niftynet:2019-12-10 19:46:41,877: [GT_TISSUE] using existing csv file /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/GT_tissue.csv, skipped filenames search
+INFO:niftynet:2019-12-10 19:46:41,883: [W] using existing csv file /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/WEIGHTS.csv, skipped filenames search
+INFO:niftynet:2019-12-10 19:46:41,889: [W_TISSUE] using existing csv file /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/WEIGHTS_TISSUE.csv, skipped filenames search
+INFO:niftynet:2019-12-10 19:46:41,895: [S] using existing csv file /media/francesco/data/Fra/DL/GitLab_Bern/Config/NIH/SAMPLE.csv, skipped filenames search
+INFO:niftynet:2019-12-10 19:46:41,901: 
+
+Number of subjects 50, input section names: ['subject_id', 'MP2RAGE', 'EPI', 'T2star', 'GT', 'GT2', 'GT_TISSUE', 'W', 'W_TISSUE', 'S']
+-- using all subjects (without data partitioning).
+
