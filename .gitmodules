@@ -1,0 +1,3 @@
+[submodule "NiftyNet"]
+	path = NiftyNet
+	url = https://git.upd.unibe.ch/openscience/NiftyNet.git
