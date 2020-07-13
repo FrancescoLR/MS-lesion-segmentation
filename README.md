@@ -7,6 +7,7 @@ This software provide a multiple sclerosis cortical and white matter lesion segm
 
 ## Install
 First clone the repository and pull the niftynet code in the submodule as follows <br />
+
 `git clone  https://github.com/FrancescoLR/MS-lesion-segmentation/` <br />
 `git submodule update --init` <br />
 
@@ -28,6 +29,7 @@ python -m pip install -r requirements-cpu.txt
 python -m pip install -e ./niftynet
 deactivate
 ```
+## Run
 
 Before any use, the vitual environment needs to be activate
 ```
@@ -36,7 +38,9 @@ source $(pwd)/niftynet-cpu/bin/activate
 ```
 
 Example command for inference, which follows the settings in the configuration file: <br />
+
 `net_run inference -c path_to/config_file.ini  -a niftynet.application.segmentation_application.SegmentationApplication` <br />
+
 
 Further instructions are present in the [NiftyNet website](https://niftynet.readthedocs.io/en/dev/). A configuration file and a trained model are provided in separate folders in the root directory.
 
