@@ -9,6 +9,7 @@ This software provide a multiple sclerosis cortical and white matter lesion segm
 First clone the repository and pull the niftynet code in the submodule as follows <br />
 
 `git clone  https://github.com/FrancescoLR/MS-lesion-segmentation/` <br />
+`cd MS-lesion-segmentation` <br />
 `git submodule update --init` <br />
 
 Optionally, install a Python virtual environment
@@ -23,10 +24,9 @@ Next, activate the environment and install the custom Niftynet and the required 
 ```
 source $(pwd)/niftynet-cpu/bin/activate
 # for the GPU version, run `source $(pwd)/niftynet-gpu/bin/activate`
-cd niftynet/
-python -m pip install -r requirements-cpu.txt
-# for the GPU version, run `python -m pip install -r niftynet/requirements-gpu.txt`
-python -m pip install -e ./niftynet
+python -m pip install -r NiftyNet/requirements-cpu.txt
+# for the GPU version, run `python -m pip install -r NiftyNet/requirements-gpu.txt`
+python -m pip install -e ./NiftyNet
 deactivate
 ```
 ## Run
@@ -37,12 +37,13 @@ source $(pwd)/niftynet-cpu/bin/activate
 # For the GPU version `source $(pwd)/niftynet-gpu/bin/activate`
 ```
 
-Example command for inference, which follows the settings in the configuration file: <br />
+A configuration file and a trained model are provided in separate folders in the root directory. For inference co-register FLAIR and MP2RAGE images and place them in newly created folders data/FLAIR and data/MP2RAGE, respectively. Then, run: <br />
 
-`net_run inference -c path_to/config_file.ini  -a niftynet.application.segmentation_application.SegmentationApplication` <br />
+`net_run inference -c path_to/MS-lesion-segmentatin/Configuration file/config_network.ini  -a niftynet.application.segmentation_application.SegmentationApplication` <br />
 
+The segmentations will be saved to `data/inference/`. Additional parameters can be set in the configuration file `Configuration file/config_network.ini`.
 
-Further instructions are present in the [NiftyNet website](https://niftynet.readthedocs.io/en/dev/). A configuration file and a trained model are provided in separate folders in the root directory.
+Further instructions and commands to train a network on new data are present in the [NiftyNet website](https://niftynet.readthedocs.io/en/dev/). 
 
 
 ## License
