@@ -10,13 +10,10 @@ First clone the repository and pull the niftynet code in the submodule as follow
 
 `git clone  https://github.com/FrancescoLR/MS-lesion-segmentation/` <br />
 `cd MS-lesion-segmentation` <br />
-`git submodule update --init` <br />
 
 Optionally, create a conda environment with the .yaml file provided.
 
-```
 ## Run
-
 
 ## License
 This software is released under the version 2.0 of the Apache License.
