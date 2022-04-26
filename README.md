@@ -50,7 +50,7 @@ Further instructions and commands to train a network on new data are present in 
 This software is released under the version 2.0 of the Apache License.
 
 ## Cite
-If you use this code please cite the follwing references:
+If you use this code please cite the following references:
 
 - Gibson, Eli, et al. "NiftyNet: a deep-learning platform for medical imaging." Computer methods and programs in biomedicine 158 (2018): 113-122. [doi](https://doi.org/10.1016/j.cmpb.2018.01.025)
 - La Rosa, Francesco, et al. "Multiple sclerosis cortical and WM lesion segmentation at 3T MRI: a deep learning method based on FLAIR and MP2RAGE." NeuroImage: Clinical (2020): 102335. [doi](https://doi.org/10.1016/j.nicl.2020.102335)
